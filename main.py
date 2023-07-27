@@ -1,16 +1,9 @@
-# This is a sample Python script.
+from src.utils import get_employers, create_db, create_tables, fill_db
+from config import config
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+database_name = 'cw'
+params = config()
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+create_db(database_name, params)
+create_tables(database_name, params)
+fill_db(get_employers([78638, 84585]), database_name, params)
