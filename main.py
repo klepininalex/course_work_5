@@ -10,12 +10,12 @@ if __name__ == '__main__':
                  1740,  # Яндекс
                  1375441,  # Okko
                  1272486,  # Сбермаркет
-                 2324020,  # Точка (которая финтех, а не мак)
+                 2324020,  # Точка(которая финтех, а не мак)
                  1122462,  # Skyeng
                  15478  # VK
                  ]
 
-    database_name = 'cw'
+    database_name = 'имя базы данных'
     params = config()
 
     create_db(database_name, params)
